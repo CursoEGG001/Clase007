@@ -18,6 +18,7 @@ public class EExtra03 {
     public static void main(String[] args) {
         Juego juego = new Juego();
         for (int i = 0; i < 7; i++) {
+            if (i==0) System.out.println("Empecemos el juego...");
              juego.iniciar_juego();
         }
        
