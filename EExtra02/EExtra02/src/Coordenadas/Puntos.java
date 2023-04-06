@@ -68,13 +68,60 @@ public class Puntos {
     public void creaPuntos() {
         Scanner datos = new Scanner(System.in);
         System.out.println("Ingrese el punto 1 en x");
-        x1=datos.nextInt();
+        x1 = datos.nextInt();
         System.out.println("Ingrese el punto 1 en y");
-        y1=datos.nextInt();
+        y1 = datos.nextInt();
         System.out.println("Ingrese el punto 2 en x");
-        x2=datos.nextInt();
+        x2 = datos.nextInt();
         System.out.println("Ingrese el punto 2 en y");
-        y2=datos.nextInt();
+        y2 = datos.nextInt();
     }
-    
+
+    public void presentaPuntos() {
+
+        // Get the distance between the two points
+        double distancia = getDistancia();
+
+        // Calculate the normalized vector
+        double dx = (x2 - x1) / distancia;
+        double dy = (y2 - y1) / distancia;
+
+        // Factor de escalado para una de 10 por 10
+        double Escalado = Math.min(10.0 / Math.abs(dx), 10.0 / Math.abs(dy));
+
+        // Calculate the scaled coordinates
+        double sx1 = x1 / distancia * Escalado;
+        double sy1 = y1 / distancia * Escalado;
+        double sx2 = x2 / distancia * Escalado;
+        double sy2 = y2 / distancia * Escalado;
+
+        int maxX = (int) Math.max(sx1, sx2); // Maximo en x
+        int maxY = (int) Math.max(sy1, sy2); // Maximo en y 
+
+        // Arreglo de representación
+        char[][] matriz = new char[maxX+1][maxY+1];
+        for (int i = 0; i < maxX+1; i++) {
+            for (int j = 0; j < maxY+1; j++) {
+                matriz[i][j] = '.';
+            }
+        }
+
+        int p1x=(int) Math.round(sx1);
+        int p2x=(int) Math.round(sx2);
+        int p1y=(int) Math.round(sy1);
+        int p2y=(int) Math.round(sy2);
+        // Pone los puntos en la matriz
+        matriz[p1x-1][p1y-1] = 'A';
+        matriz[p2x-1][p2y-1] = 'B';
+        // muestra puntos
+        System.out.println("Puntos:");
+        for (int i = maxX; i >= 0; i--) {
+            for (int j = 0; j < maxY; j++) {
+                System.out.print(matriz[i][j]);
+            }
+            System.out.println();
+        }
+        System.out.println("Máximo X: " + maxX + " Máximo en Y: " + maxY );
+
+    }
 }
