@@ -99,29 +99,27 @@ public class Puntos {
         int maxY = (int) Math.max(sy1, sy2); // Maximo en y 
 
         // Arreglo de representación
-        char[][] matriz = new char[maxX+1][maxY+1];
-        for (int i = 0; i < maxX+1; i++) {
-            for (int j = 0; j < maxY+1; j++) {
-                matriz[i][j] = '.';
-            }
-        }
+        int p1x = (int) Math.round(sx1);
+        int p2x = (int) Math.round(sx2);
+        int p1y = (int) Math.round(sy1);
+        int p2y = (int) Math.round(sy2);
 
-        int p1x=(int) Math.round(sx1);
-        int p2x=(int) Math.round(sx2);
-        int p1y=(int) Math.round(sy1);
-        int p2y=(int) Math.round(sy2);
-        // Pone los puntos en la matriz
-        matriz[p1x-1][p1y-1] = 'A';
-        matriz[p2x-1][p2y-1] = 'B';
         // muestra puntos
         System.out.println("Puntos:");
-        for (int i = maxX; i >= 0; i--) {
-            for (int j = 0; j < maxY; j++) {
-                System.out.print(matriz[i][j]);
+        for (int i = maxY+1; i >= 0; i--) {
+            for (int j = 0; j < maxX+1; j++) {
+                if (j == p1x && i == p1y) {
+                    System.out.print("A");
+                } else if (j == p2x && i == p2y) {
+                    System.out.print("B");
+                } else {
+
+                    System.out.print(".");
+                }
             }
             System.out.println();
         }
-        System.out.println("Máximo X: " + maxX + " Máximo en Y: " + maxY );
+        System.out.println("Máximo X: " + maxX + " Máximo en Y: " + maxY);
 
     }
 }
