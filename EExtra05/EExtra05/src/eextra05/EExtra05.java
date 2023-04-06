@@ -35,9 +35,9 @@ public class EExtra05 {
             chico02.calcular_aumento();
         }
         System.out.println("Estos son los sueldos actuales: \n"+
-                chico01.getNombre()+"\n" +
-                chico01.getSalario() + "\n" +
-                chico02.getNombre() + "\n" +
-                chico02.getSalario());
+               "Nombre: "+ chico01.getNombre()+"\n" +
+               "Adeudado: "+ chico01.getSalario() + "\n" +
+               "Nombre: "+ chico02.getNombre() + "\n" +
+               "Adeudado: "+ chico02.getSalario());
     }
 }
