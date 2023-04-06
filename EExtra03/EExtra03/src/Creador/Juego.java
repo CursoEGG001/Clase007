@@ -31,7 +31,7 @@ public class Juego {
         //Logica inicia aqui.
         intentos = 0;
         boolean adivinado = false;
-        while (intentos < 3) { // número máximo de intentos
+        while (intentos < 13) { // número máximo de intentos
             // Jugador 2 intenta adivinar el número
             System.out.println("Jugador 2, intenta adivinar el número: ");
             int suposicion = scanner.nextInt();
