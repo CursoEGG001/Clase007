@@ -79,17 +79,17 @@ public class Puntos {
 
     public void presentaPuntos() {
 
-        // Get the distance between the two points
+        // Obtiene la distancia entre los puntos
         double distancia = getDistancia();
 
-        // Calculate the normalized vector
+        // Calcula el vector normalizado
         double dx = (x2 - x1) / distancia;
         double dy = (y2 - y1) / distancia;
 
         // Factor de escalado para una de 10 por 10
         double Escalado = Math.min(10.0 / Math.abs(dx), 10.0 / Math.abs(dy));
 
-        // Calculate the scaled coordinates
+        // Calculo de cooredenadas escaladas
         double sx1 = x1 / distancia * Escalado;
         double sy1 = y1 / distancia * Escalado;
         double sx2 = x2 / distancia * Escalado;
@@ -113,7 +113,6 @@ public class Puntos {
                 } else if (j == p2x && i == p2y) {
                     System.out.print("B");
                 } else {
-
                     System.out.print(".");
                 }
             }
