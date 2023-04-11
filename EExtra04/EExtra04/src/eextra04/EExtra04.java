@@ -19,7 +19,8 @@ public class EExtra04 {
     public static void main(String[] args) {
        Scanner info = new Scanner(System.in);
        Cuenta seniorA = new Cuenta( "Don Ricardo", 1243);
-              
+       
+        System.out.println("Ingrese nombre y saldo en cuenta:\n");
        String donsenior = info.nextLine();
        double saldoDonsenior = info.nextDouble();
        
