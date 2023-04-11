@@ -17,8 +17,8 @@ public class EExtra05 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Empleado chico01 = new Empleado("Dario", 34, 125611);
-        Empleado chico02 = new Empleado("Fulgencio", 28, 111987);
+        Empleado chico01 = new Empleado("Dario", 34, 123456);
+        Empleado chico02 = new Empleado("Fulgencio", 28, 123456);
 
         Scanner info = new Scanner(System.in);
         int contablesMeses;
