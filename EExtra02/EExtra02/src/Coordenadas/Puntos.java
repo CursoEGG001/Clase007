@@ -107,7 +107,7 @@ public class Puntos {
         // muestra puntos
         System.out.println("Puntos:");
         for (int i = maxY+1; i >= 0; i--) {
-            for (int j = 0; j < maxX+1; j++) {
+            for (int j = 0; j <= maxX+1; j++) {
                 if (j == p1x && i == p1y) {
                     System.out.print("A");
                 } else if (j == p2x && i == p2y) {
