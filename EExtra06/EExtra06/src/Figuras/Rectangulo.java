@@ -40,9 +40,9 @@ public class Rectangulo {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("Rectangulo{");
-        sb.append("lado1=").append(lado1);
-        sb.append(", lado2=").append(lado2);
+        sb.append("Rectangulo {");
+        sb.append("lado 1 : ").append(lado1);
+        sb.append(", lado 2: ").append(lado2);
         sb.append('}');
         return sb.toString();
     }
